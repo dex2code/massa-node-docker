@@ -21,7 +21,7 @@ fi
 
 
 cd $CLIENT_PATH
-$CLIENT_PATH/massa-client -p $MASSA_PASS
+$CLIENT_PATH/massa-client -p $MASSA_PASS $@
 
 
 echo "MASSA Client exited"

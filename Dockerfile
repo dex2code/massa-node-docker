@@ -76,11 +76,13 @@ RUN  mkdir -p \
        ${MASSA_HOME}/massa-node \
        ${MASSA_HOME}/massa-node/storage \
        ${MASSA_HOME}/massa-node/dump \
+       ${MASSA_HOME}/massa-node/config/staking_wallets \
        ${MASSA_HOME}/massa-client \
        ${MASSA_HOME}/massa-client/wallets
 
 VOLUME  ${MASSA_HOME}/massa-node/storage
 VOLUME  ${MASSA_HOME}/massa-node/dump
+VOLUME  ${MASSA_HOME}/massa-node/config/staking_wallets
 VOLUME  ${MASSA_HOME}/massa-client/wallets
             
 COPY  --from=builder \

@@ -33,13 +33,23 @@ Link to Docker repository: https://hub.docker.com/r/dex2build/massa-node
       --restart="unless-stopped" \
       dex2build/massa-node:latest
 
-`MASSA_PASS` - Specify your own password or leave this variable empty so that the container generates and remembers a random password
+`MASSA_PASS` - Specify your own password or leave this variable empty so that the container generates and remembers a random password. If you leave this field blank, the generated password will be listed in the first lines of the logs of the running container, and you can also get it in the `/home/massa/massa_node/massa-pass.txt` file inside your container.
 
-`MASSA_ADDRESS` - Specify your external address so that your node is a full member of the network
+### Important!
+
+You must keep the value of the `MASSA_PASS` in a safe place because all your data will be encrypted with this password.
+
+If you lose this password and the secret key of your wallet, you will lose access to your savings.
+
+`MASSA_ADDRESS` - Specify your external address so that your node is a full member of the network.
 
 ## Using the MASSA client to configure the node
 
     docker container exec -ti massa_node massa-client.sh
+
+You also can use client commands:
+
+    docker container exec -ti massa_node massa-client.sh get_status
 
 ## Access to the host shell
 
