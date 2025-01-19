@@ -1,4 +1,4 @@
-# MASSA Blockchain Node - Docker Image
+# MASSA Blockchain Node :: Docker Image
 
 The MASSA blockchain node ( https://massa.net ) can be launched with a single command using the Docker containerization technology.
 
