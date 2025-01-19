@@ -1,0 +1,7 @@
+[protocol]
+    #routable_ip = ""
+
+[bootstrap]
+    retry_delay = 5000
+    read_timeout = 300000
+    write_timeout = 300000
